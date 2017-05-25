@@ -1,0 +1,348 @@
+/* Vendor Edit */
+
+.button-right {
+    float: right;
+    position: relative;
+    bottom: 5px;
+}
+
+.as-inline {
+    display: inline-block;
+}
+
+.panel-badge {
+    color: #ffffff !important;
+    background-color: #777777 !important;
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+
+/* Moving Preview */
+
+.status-confirmed {
+    color: green;
+}
+
+.status-unconfirmed {
+    color: red;
+}
+
+.client-phone-confirmed {
+    margin-left: 5px;
+    font-size: 90%;
+}
+
+@font-face {
+    font-family: 'fontello';
+    src: url('/fonts/fontello.eot');
+    src: url('/fonts/fontello.eot') format('embedded-opentype'),
+    url('/fonts/fontello.woff') format('woff'),
+    url('/fonts/fontello.ttf') format('truetype'),
+    url('/fonts/fontello.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon-t {
+    font-family: "fontello";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-t:before {
+    content: '\e846';
+}
+
+.custom-icon {
+    font-size: 50px;
+    position: absolute;
+    top: -10px;
+    margin-left: 10px;
+}
+
+dl.moving-from dt, dl.moving-to dt {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+
+dl.moving-from dd, dl.moving-to dd {
+    display: inline-block;
+    width: 66%;
+}
+
+.moving-price-label {
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+.moving-address h4 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.moving-time {
+    display: block;
+    font-size: 14px !important;
+    position: relative;
+    top: 4px;
+}
+
+.moving-time-container {
+    text-align: right;
+}
+
+.moving-progress-heading {
+    text-align: center;
+}
+
+.moving-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+.moving-log-msg-icon {
+    margin-right: 5px;
+}
+
+.moving-log {
+    display: inline-block;
+}
+
+.moving-log-time {
+    float: left;
+}
+
+.moving-address dl {
+    font-size: 15px;
+}
+
+.moving-address dt {
+    font-weight: inherit;
+}
+
+.moving-address dd {
+    font-weight: bold;
+}
+
+.moving-items-h-secondary {
+    display: inline-block;
+    float: right;
+}
+
+.moving-items-h {
+    display: inline-block;
+}
+
+.moving-factor p {
+    margin: 0 !important;
+}
+
+span.moving-vendor-heading, span.moving-actions-heading  {
+    font-size: 16px;
+
+}
+
+textarea.moving-note-text {
+    border-color: #ccc;
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.moving-note-button-container {
+    float: right;
+}
+
+.row-heading {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.line-separator {
+    box-sizing: content-box;
+    border: 0;
+    border-top: 1px solid #e8e5e5;
+    margin-bottom: 10px;
+}
+
+.price-secondary-label {
+    font-size: 100%;
+}
+
+.button-glyphicon {
+    top: 2px;
+}
+
+.moving-client p.name, .moving-vendor p.name, .selected-vendor p.name {
+    font-size: 15px;
+}
+
+.moving-time-container-r {
+    display: none;
+}
+
+.assign-vendor .assign-vendor-form {
+    margin-top: 10px;
+}
+
+.switch-status {
+    width: 56%;
+}
+
+.vendor-actions {
+    margin-top: 5px;
+}
+
+.fine-client-block, .charge-result {
+    margin-top: 10px;
+}
+
+.charge-alert {
+    font-weight: 500;
+}
+
+.transaction-row-large-width {
+    width: 77% !important;
+}
+
+.selected-vendor {
+    margin-bottom: 10px;
+    background-color: #eae9e9;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.selected-vendor .selected-heading {
+    font-weight: bold;
+}
+
+span.autosuggest-tpl-status, .selected-vendor p.status {
+    color: green;
+}
+
+#price-calculation .totals-list-row {
+    border-top: 2px solid #dddddd;
+}
+
+#price-calculation .totals-row {
+    font-weight: bold;
+}
+
+.popover {
+    font-family: "Exo 2", Helvetica, Arial, sans-serif;
+}
+
+.upload-button {
+    line-height: 1em;
+    display: inline-block;
+}
+
+input[type=file].upload-input {
+    margin-top: 3px;
+    width: 220px;
+    line-height: 8px;
+    display: inline-block;
+}
+
+.listContainer .alert {
+    vertical-align: middle;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-bottom: 0px;
+    line-height: 18px;
+    width: 71px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 400px) and (orientation : portrait) {
+    .moving-address, .moving-vendor .vendor-buttons {
+        width: 100% !important;
+    }
+
+    .moving-vendor .vendor-buttons:first-child {
+        margin-bottom: 10px;
+    }
+
+    dl.moving-from dt, dl.moving-to dt {
+        width: 38%;
+    }
+
+    dl.moving-from dd, dl.moving-to dd {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-device-width : 400px) and (max-device-width : 520px) and (orientation : portrait) {
+    .moving-address {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 520px) and (orientation : portrait) {
+    h3 {
+        font-size: 20px; !important;
+    }
+
+    .moving-progress-heading {
+        width: 45%;
+    }
+
+    .moving-time-container {
+        width: 0;
+        display: none;
+    }
+
+    .moving-price-label {
+        margin-left: 5px;
+    }
+
+    .moving-time {
+        text-align: left;
+    }
+
+    .moving-time-container-r {
+        display: block;
+    }
+
+    .moving-time-container {
+        display: none;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 390px) and (orientation : portrait) {
+    h3 {
+        font-size: 17px; !important;
+    }
+}
+
+
+/* Moving Fine */
+
+.moving-fines-buttons {
+    float: right;
+}
+
+textarea.moving-fine-comment {
+    border-color: #ccc;
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.fine-input-row {
+    margin-bottom: 15px;
+}
+
+.fine-key {
+    font-size: 17px;
+}

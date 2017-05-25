@@ -1,0 +1,28 @@
+{
+  "name": "Pts",
+  "description": "Pts project",
+  "main": "index.js",
+  "authors": [
+    "benefit50"
+  ],
+  "license": "ISC",
+  "homepage": "pts-dan.webdelo.org",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "notiny": "^0.0.6",
+    "angular-ckeditor": "^1.0.3",
+    "ng-ckeditor": "^0.2.1",
+    "mdPickers": "^0.7.5",
+    "device.js": "devicejs#^0.2.7",
+    "bootstrap-vertical-tabs": "^1.2.1",
+    "international-phone-number": "^0.0.16",
+    "angular-twilio-verification": "*"
+  }
+}
