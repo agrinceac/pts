@@ -34,7 +34,7 @@ class ArticleRepo
      * @param int $statusId
      * @return ArticleRepo
      */
-    public function filterByStatus( int $statusId )
+    public function filterByStatus( $statusId )
     {
         $this->articles->where('statusId', $statusId);
         return $this;
@@ -44,7 +44,7 @@ class ArticleRepo
      * @param int $statusId
      * @return ArticleRepo
      */
-    public function filterByCategory( int $categoryId )
+    public function filterByCategory( $categoryId )
     {
         $this->articles->where('categoryId', $categoryId);
         return $this;
@@ -54,7 +54,7 @@ class ArticleRepo
      * @param string $name
      * @return ArticleRepo
      */
-    public function filterByName( string $name )
+    public function filterByName( $name )
     {
         $this->articles->where('name', 'LIKE', '%'.$name.'%');
         return $this;
@@ -64,7 +64,7 @@ class ArticleRepo
      * @param string $text
      * @return ArticleRepo
      */
-    public function filterByText( string $text )
+    public function filterByText( $text )
     {
         $this->articles->where('text', 'LIKE', '%'.$text.'%');
         return $this;
@@ -74,7 +74,7 @@ class ArticleRepo
      * @param int $id
      * @return ArticleRepo
      */
-    public function filterById(int $id) : self
+    public function filterById($id) : self
     {
         $this->articles->where('id', $id);
         return $this;

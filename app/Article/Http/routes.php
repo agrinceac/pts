@@ -13,7 +13,6 @@ Route::group(['middleware' => 'web'], function ()
 	Route::resource('api/admin/articles', 'ArticleAdminController');
 });
 
-
 Route::get('articles/{slug}', [
 	'as' => 'articles.show',
 	'uses' => 'ArticleController@show'
@@ -28,3 +27,8 @@ Route::get('/api/articles/{alias}', [
     'as' => 'articles.show',
     'uses' => 'ArticleController@byAliasJson'
 ]);
+
+Route::get('categories', 'ArticleController@getCategories');
+Route::get('articlesByCatId/{categoryId}', 'ArticleController@getArticlesByCategoryId');
+Route::get('category/{categoryId}', 'ArticleController@getCategory');
+Route::get('articles', 'ArticleController@getArticles');

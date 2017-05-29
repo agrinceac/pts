@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\AdminRoute;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 /**
@@ -73,5 +74,8 @@ class Kernel extends HttpKernel
          */
         'access.routeNeedsRole'       => \App\Http\Middleware\RouteNeedsRole::class,
         'access.routeNeedsPermission' => \App\Http\Middleware\RouteNeedsPermission::class,
+
+
+        'adminRoute' => AdminRoute::class,
     ];
 }

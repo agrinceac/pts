@@ -2,6 +2,8 @@
 
 use App\Article\Models\Article;
 use App\Article\Models\ArticleVariable;
+use App\Article\Models\Category;
+use App\Article\Repositories\ArticleRepo;
 use Illuminate\Routing\Controller as BaseController;
 use View;
 
@@ -18,14 +20,12 @@ class ArticleController extends BaseController {
 	public function showJson($slug)
 	{
 		$article  = Article::findOrFail($slug);
-
 		return response()->json($article);
 	}
 
     public function byAliasJson($alias)
     {
         $article  = Article::where('alias', $alias)->first();
-
         return response()->json($article);
     }
 
@@ -52,5 +52,25 @@ class ArticleController extends BaseController {
         $articleVariables = ArticleVariable::all();
 
         return response()->json($articleVariables);
+    }
+
+    public function getCategories()
+    {
+        return response()->json( (new Category())->get() );
+    }
+
+    public function getArticlesByCategoryId($categoryId)
+    {
+        return response()->json( ((new ArticleRepo())->filterByCategory($categoryId)->get()->get()) );
+    }
+
+    public function getCategory($categoryId)
+    {
+        return response()->json( Category::findOrFail($categoryId) );
+    }
+
+    public function getArticles()
+    {
+        return response()->json( Article::get() );
     }
 }

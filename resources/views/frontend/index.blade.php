@@ -309,10 +309,14 @@
 
         app.run(function($rootScope, $location, $http, $sce) {
             $rootScope.$on("$locationChangeStart", function(event, next, current) {
-                console.log($location);
+//                console.log($location);
+
                 var locationUrl = ($location.$$url == "/") || ($location.$$url == "") ? "/index" : $location.$$url;
+
+                console.log( "http://" + window.location.hostname + "/api/articles" + locationUrl );
+
                 $http
-                    .get("http://pts-dan.webdelo.org/api/articles" + locationUrl)
+                    .get("http://" + window.location.hostname + "/api/articles" + locationUrl)
                     .then(function(response) {
                         $rootScope.page = response.data;
                         $rootScope.page.text = $sce.trustAsHtml($rootScope.page.text);
