@@ -25,7 +25,7 @@ class ArticleController extends BaseController {
 
     public function byAliasJson($alias)
     {
-        $article  = Article::where('alias', $alias)->first();
+        $article  = Article::where('alias', $alias)->with('images')->first();
         return response()->json($article);
     }
 

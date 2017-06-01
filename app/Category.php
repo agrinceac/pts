@@ -97,4 +97,15 @@ class Category extends Eloquent{
     {
         return $this->hasOne(get_class($this), 'id', 'parentId');
     }
+
+    public function getParentsArray()
+    {
+        $parents = [];
+        $category = $this;
+        while( isset($category->parent) ){
+            $parents[] = $category->parent;
+            $category = $category->parent;
+        }
+        return $parents;
+    }
 }

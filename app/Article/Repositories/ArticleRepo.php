@@ -46,7 +46,7 @@ class ArticleRepo
      */
     public function filterByCategory( $categoryId )
     {
-        $this->articles->where('categoryId', $categoryId);
+        $this->articles->with('images')->where('categoryId', $categoryId);
         return $this;
     }
 

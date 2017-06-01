@@ -13,6 +13,8 @@ use Illuminate\Support\Collection;
  */
 class Article extends Model
 {
+    protected $appends = ['breadcrumbs'];
+
 	/**
 	 * @const string
 	 */
@@ -68,7 +70,7 @@ class Article extends Model
     /**
      * @return Collection
      */
-    public function getImages() : Collection
+    public function getImages()
     {
         return $this->images;
     }
@@ -164,5 +166,27 @@ class Article extends Model
         return Article::where('id', '<', $this->id)
             ->orderBy('id', 'ASC')
             ->first();
+    }
+
+    public function getBreadcrumbsAttribute()
+    {
+        $breadcrumbs = [];
+
+        foreach (array_reverse($this->category->getParentsArray()) as $key=>$parent)
+            $breadcrumbs[] = [
+                'step'=>$key + 1,
+                'id'=>$parent->id,
+                'alias'=>$parent->alias,
+                'name'=>$parent->name
+            ];
+
+        $breadcrumbs[] = [
+            'step'=>count($this->category->getParentsArray()) + 1,
+            'id'=>$this->category->id,
+            'alias'=>$this->category->alias,
+            'name'=>$this->category->name
+        ];
+
+        return $breadcrumbs;
     }
 }
