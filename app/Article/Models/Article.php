@@ -30,6 +30,11 @@ class Article extends Model
 	 */
 	protected $guarded = ['id', 'author_id'];
 
+    protected $casts = [
+        'statusId' => 'integer',
+        'categoryId' => 'integer'
+    ];
+
 	/**
 	 * @var array
 	 */
