@@ -66,10 +66,33 @@ a:hover {
  text-decoration: underline;
 }
 
+header,
+main,
+footer {
+	display: block;
+}
+
 /*Boxed Layout
 ------------------------------------*/
 .wrapper {
 	background: #fff;
+}
+
+picture.img-responsive {
+	display: block;
+	height: 220px;
+	background-size: auto 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(../img/no_image.svg);
+}
+
+.carousel-indicators>li {
+	box-shadow: rgba(0,0,0, .4) 0 2px 4px;
+	margin-right: 4px;
+}
+.carousel-indicators>li.active {
+	margin-right: 4px;
 }
 
 .boxed-layout {

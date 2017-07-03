@@ -4,13 +4,13 @@
 <!--[if !IE]><!--> 
 <html lang="bg" ng-app="site"> <!--<![endif]-->
 <head>
-    <title ng-bind="page.name"></title>
+    <title ng-bind="page.metaTitle ? page.metaTitle : page.name"></title>
 
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ng-bind: page.metaDescription;">
-    <meta name="keywords" content="ng-bind: page.metaKeywords;">
+    <meta name="description">
+    <meta name="keywords">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
@@ -27,13 +27,12 @@
     <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="assets/plugins/animate.css">
-    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+<!--     <link rel="stylesheet" href="assets/plugins/animate.css"> -->
+<!--     <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css"> -->
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/animated-headline/css/animated-headline.css">
-<!--     <link rel="stylesheet" href="assets/plugins/parallax-slider/css/parallax-slider.css"> -->
-    <link rel="stylesheet" href="assets/plugins/fancybox/source/jquery.fancybox.css">
-<!--     <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css"> -->
+<!--     <link rel="stylesheet" href="assets/plugins/animated-headline/css/animated-headline.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css">
 
     <!-- CSS Theme -->
     <link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
@@ -41,12 +40,14 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 
 <body class="header-fixed">
     <div class="wrapper">
         <!--=== Header v6 ===-->
-        <div class="header-v6 header-transparent header-dark-dropdown header-sticky header-fixed-shrink">
+        <header class="header-v6 header-transparent header-dark-dropdown header-sticky header-fixed-shrink">
             <!-- Navbar -->
             <div class="navbar mega-menu" role="navigation">
                 <div class="container">
@@ -75,7 +76,7 @@
                             <ul class="nav navbar-nav">
                                 <!-- Home -->
                                 <li>
-                                    <a href="#!/about">
+                                    <a href="#!/articles/about">
                                         За Нас
                                     </a>
                                 </li>
@@ -83,69 +84,15 @@
 
                                 <!-- Blog -->
                                 <li class="dropdown">
-                                    <a href="#!/what-do-we-offer" class="dropdown-toggle" data-toggle="dropdown">
+                                    <a href="#!/categories" class="dropdown-toggle" data-toggle="dropdown">
                                         Какво Предлагаме
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown-submenu">
-                                            <a href="javascript:void(0);">Ядрената енергетика</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#!/products">Въздухоохладители</a></li>
-                                                <li><a href="#">Детайли на тръбопроводите</a></li>
-                                                <li><a href="#">Eлектро приводи</a></li>
-                                                <li><a href="#">Изделия от неръдаема стомана</a></li>
-                                                <li><a href="#">Нестандартно оборудване</a></li>
-                                                <li><a href="#">Оборудване за филтриране</a></li>
-                                                <li><a href="#">Помпено оборудване</a></li>
-                                                <li><a href="#">Спирателна арматура</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown-submenu">
-                                            <a href="javascript:void(0);">Теплова енергетика</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Детайли на тръбопроводите</a></li>
-                                                <li><a href="#">Електрически приводи</a></li>
-                                                <li><a href="#">Котли</a></li>
-                                                <li><a href="#">Нестандартно оборудване</a></li>
-                                                <li><a href="#">Помпено оборудване</a></li>
-                                                <li><a href="#">Спирателна арматура</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown-submenu">
-                                            <a href="javascript:void(0);">Нефтогазова индустрия</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Електро приводи</a></li>
-                                                <li><a href="#">Маркучи</a></li>
-                                                <li><a href="#">Нестандартно оборудване</a></li>
-                                                <li><a href="#">Помпено оборудване</a></li>
-                                                <li><a href="#">Спирателна арматура</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown-submenu">
-                                            <a href="#">Металургичната индустрия</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Спирателна арматура</a></li>
-                                                <li><a href="#">Тръбопроводна арматура</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown-submenu">
-                                            <a href="javascript:void(0);">ВиК</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Делайли на тръбопровод</a></li>
-                                                <li><a href="#">Нестандартно оборудване</a></li>
-                                                <li><a href="#">Помпено оборудване</a></li>
-                                                <li><a href="#">Спирателна арматура</a></li>
-                                                <li><a href="#">Тръби</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Филтри</a></li>
-                                    </ul>
                                 </li>
                                 <!-- End Blog -->
 
                                 <!-- Portfolio -->
                                 <li>
-                                    <a href="#!/docs">
+                                    <a href="#!/articles/docs">
                                         Документи
                                     </a>
                                 </li>
@@ -153,7 +100,7 @@
 
                                 <!-- Features -->
                                 <li class="hidden-md">
-                                    <a href="#!/clients">
+                                    <a href="#!/articles/clients">
                                         Клиенти
                                     </a>
                                 </li>
@@ -161,7 +108,7 @@
 
                                 <!-- Shortcodes -->
                                 <li class="mega-menu-fullwidth">
-                                    <a href="#!/contacts">
+                                    <a href="#!/articles/contacts">
                                         Контакти
                                     </a>
                                 </li>
@@ -172,29 +119,13 @@
                 </div>
             </div>
             <!-- End Navbar -->
-        </div>
+        </header>
         <!--=== End Header v6 ===-->
 
-        <main>
-            <!--=== Breadcrumbs ===-->
-            <div class="breadcrumbs margin-top-70">
-                <div class="container">
-                    <h1 class="pull-left" ng-bind="page.h1"></h1>
-                    <nav>
-                        <ul class="pull-right breadcrumb">
-                            <li><a href="index.html">Основен</a></li>
-                            <li><a href="">Страница</a></li>
-                            <li class="active" ng-bind="page.h1"></li>
-                        </ul>
-                    </nav>
-                </div><!--/container-->
-            </div><!--/breadcrumbs-->
-            <!--=== End Breadcrumbs ===-->
-            <article ng-bind-html="page.text"></article>
-        </main>
+        <main autoscroll="true" ng-view></main>
 
         <!--=== Footer Version 1 ===-->
-        <div class="footer-v1">
+        <footer class="footer-v1">
             <div class="footer">
                 <div class="container">
                     <div class="row">
@@ -209,20 +140,13 @@
                         <!-- Latest -->
                         <div class="col-md-3 col-sm-6 md-margin-bottom-40">
                             <div class="posts">
-                                <div class="headline"><h2>Последните публикации</h2></div>
-                                <ul class="list-unstyled latest-list">
-                                    <li>
-                                        <a href="#">Incredible content</a>
-                                        <small>Май 8, 2017</small>
-                                    </li>
-                                    <li>
-                                        <a href="#">Best shoots</a>
-                                        <small>Июнь 23, 2017</small>
-                                    </li>
-                                    <li>
-                                        <a href="#">New Terms and Conditions</a>
-                                        <small>Сентябрь 15, 2017</small>
-                                    </li>
+                                <div class="headline"><h2>Основните направления</h2></div>
+                                <ul class="list-unstyled link-list">
+                                    <li><a href="#!/category-articles/8">Ядрената Енергетика</a><i class="fa fa-angle-right"></i></li>
+                                    <li><a href="#!/category-articles/9">Теплова енергетика</a><i class="fa fa-angle-right"></i></li>
+                                    <li><a href="#!/category-articles/10">Нефтогазова индустрия</a><i class="fa fa-angle-right"></i></li>
+                                    <li><a href="#!/category-articles/11">Металургичната индустрия</a><i class="fa fa-angle-right"></i></li>
+                                    <li><a href="#!/category-articles/12">ВиК</a><i class="fa fa-angle-right"></i></li>
                                 </ul>
                             </div>
                         </div><!--/col-md-3-->
@@ -232,11 +156,11 @@
                         <div class="col-md-3 col-sm-6 md-margin-bottom-40">
                             <div class="headline"><h2>Полезни връзки</h2></div>
                             <ul class="list-unstyled link-list">
-                                <li><a href="#!/about">За нас</a><i class="fa fa-angle-right"></i></li>
-                                <li><a href="#!/what-do-we-offer">Какво предлагаме</a><i class="fa fa-angle-right"></i></li>
-                                <li><a href="#!/docs">Документи</a><i class="fa fa-angle-right"></i></li>
-                                <li><a href="#!/clients">Клиенти</a><i class="fa fa-angle-right"></i></li>
-                                <li><a href="#!/contacts">Контакти</a><i class="fa fa-angle-right"></i></li>
+                                <li><a href="#!/articles/about">За нас</a><i class="fa fa-angle-right"></i></li>
+                                <li><a href="#!/categories">Какво предлагаме</a><i class="fa fa-angle-right"></i></li>
+                                <li><a href="#!/articles/docs">Документи</a><i class="fa fa-angle-right"></i></li>
+                                <li><a href="#!/articles/clients">Клиенти</a><i class="fa fa-angle-right"></i></li>
+                                <li><a href="#!/articles/contacts">Контакти</a><i class="fa fa-angle-right"></i></li>
                             </ul>
                         </div><!--/col-md-3-->
                         <!-- End Link List -->
@@ -295,90 +219,41 @@
                     </div>
                 </div>
             </div><!--/copyright-->
-        </div>
+        </footer>
         <!--=== End Footer Version 1 ===-->
     </div><!--/wrapper-->
 
     <!-- JS Global Compulsory -->
-    <script src="assets/plugins/jquery/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-<!--    <script src="https://code.angularjs.org/1.6.3/angular-sanitize.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
     <script>
-        var app = angular.module("site", ["ngRoute"]);
+        function setMinHeightMainElement() {
+            var headerOffsetHeight = document.querySelector('header').offsetHeight,
+                footerOffsetHeight = document.querySelector('footer').offsetHeight,
+                windowOuterHeight = window.outerHeight,
+                mainOuterHeight = (windowOuterHeight - headerOffsetHeight - footerOffsetHeight) + 4;
+                
+            document.querySelector('main').style.minHeight = mainOuterHeight + 'px';
+        }
 
-        app.run(function($rootScope, $location, $http, $sce) {
-            $rootScope.$on("$locationChangeStart", function(event, next, current) {
-//                console.log($location);
-
-                var locationUrl = ($location.$$url == "/") || ($location.$$url == "") ? "/index" : $location.$$url;
-
-                console.log( "http://" + window.location.hostname + "/api/articles" + locationUrl );
-
-                $http
-                    .get("http://" + window.location.hostname + "/api/articles" + locationUrl)
-                    .then(function(response) {
-                        $rootScope.page = response.data;
-                        $rootScope.page.text = $sce.trustAsHtml($rootScope.page.text);
-
-                        //App.init();
-                        //new WOW().init();
-                        //App.initParallaxBg();
-                        //FancyBox.initFancybox();
-
-                        window.scrollTo(0, 0);
-                    });
-
-                // new WOW().init();
-                // App.initParallaxBg();
-            });
-        });
-            
-        // app.config(function($routeProvider) {
-        //  $routeProvider
-        //      .when("/", {
-        //          templateUrl: "/templates/landing.htm"
-        //      })
-        //      .when("/products", {
-        //          templateUrl: "/templates/products.htm"
-        //      })
-        //      .when("/contacts", {
-        //          templateUrl: "/templates/contacts.htm"
-        //      })
-        //      .when("/clients", {
-        //          templateUrl: "/templates/clients.htm"
-        //      })
-        //      .when("/docs", {
-        //          templateUrl: "/templates/docs.htm"
-        //      })
-        //      // .when("/about", {
-        //      //  templateUrl: "https://promtehstroi-1328b.firebaseio.com/data/0/attributes/content.json"
-        //      // })
-        //      .when("/what-do-we-offer", {
-        //          templateUrl: "/templates/what-do-we-offer.htm"
-        //      });
-        // });
+        setMinHeightMainElement();
     </script>
 
-<!--     <script src="assets/plugins/jquery/jquery-migrate.min.js"></script> -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        $(".nav a").on("click", function(){
+           $(".nav").find(".active").removeClass("active");
+           $(this).parent().addClass("active");
+        });
+    </script>
     <!-- JS Implementing Plugins -->
     <script src="assets/plugins/back-to-top.js"></script>
-<!--     <script src="assets/plugins/smoothScroll.js"></script> -->
-<!--     <script src="assets/plugins/backstretch/backstretch-ini.js"></script> -->
-<!--     <script src="assets/plugins/wow-animations/js/wow.min.js"></script> -->
-<!--     <script src="assets/plugins/animated-headline/js/modernizr.js"></script> -->
-<!--     <script src="assets/plugins/animated-headline/js/animated-headline.js"></script> -->
-<!--     <script src="assets/plugins/jquery.parallax.js"></script> -->
-<!--     <script src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script> -->
-<!--     <script src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script> -->
-    <!-- JS Customization -->
-<!--     <script src="assets/js/custom.js"></script> -->
-    <!-- JS Page Level -->
-<!--     <script src="assets/js/app.js"></script> -->
-<!--     <script src="assets/js/plugins/fancy-box.js"></script> -->
-<!--     <script src="assets/js/plugins/owl-carousel.js"></script>
-    <script src="assets/js/plugins/style-switcher.js"></script> -->
     <!--[if lt IE 9]>
     <script src="assets/plugins/respond.js"></script>
     <script src="assets/plugins/html5shiv.js"></script>

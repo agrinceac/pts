@@ -680,6 +680,10 @@
 
 /*Mega Menu
 ------------------------------------*/
+.navbar-responsive-collapse {
+	margin-top: 1px;
+}
+
 .header-v6 .mega-menu .nav,
 .header-v6 .mega-menu .dropup,
 .header-v6 .mega-menu .dropdown,
@@ -940,6 +944,13 @@
 	.header-fixed .header-v6.header-fixed-shrink .navbar-nav .active > a,
 	.header-fixed .header-v6.header-fixed-shrink .navbar-nav li > a:hover {
 		color: #1565C0;
+	}
+	.header-fixed .header-v6.header-fixed-shrink .navbar-nav .active > a {
+		transition: all .3s ease;
+	}
+	.header-fixed .header-v6.header-fixed-shrink .navbar-nav .active > a {
+		border-bottom: 3px solid #1565C0;
+		padding-bottom: 17px;
 	}
 
 	/*Navbar Brand*/

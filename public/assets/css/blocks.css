@@ -1851,7 +1851,7 @@ a.thumbnail.bordered {
   left: 50%;
   z-index: 1;
   color: #fff;
-	background: #1565C0;
+	//background: #1565C0;
 	font-size: 20px;
 	text-align: center;
 	line-height: 53px;
@@ -3862,6 +3862,10 @@ a.thumbnail.bordered {
 
 .news-v2 .news-v2-desc h3 a {
   color: #555;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
 }
 
 .news-v2 .news-v2-desc h3 a:hover {

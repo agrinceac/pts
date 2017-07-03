@@ -1,0 +1,1 @@
+<article ng-bind-html="page.text" class="margin-top-70"></article>
