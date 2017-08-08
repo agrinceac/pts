@@ -204,6 +204,8 @@ return [
         \App\Article\ArticleServiceProvider::class,
         Unisharp\Ckeditor\ServiceProvider::class,
 
+
+        Nutsweb\LaravelPrerender\LaravelPrerenderServiceProvider::class
     ],
 
     /*

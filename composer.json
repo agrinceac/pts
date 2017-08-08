@@ -21,7 +21,8 @@
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "5.4.*",
         "unisharp/laravel-ckeditor": "^4.5",
-        "yajra/laravel-datatables-oracle": "^7.0"
+        "yajra/laravel-datatables-oracle": "^7.0",
+        "nutsweb/laravel-prerender": "2.0.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
