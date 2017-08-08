@@ -17,4 +17,7 @@
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+
+    RewriteCond %{REQUEST_FILENAME} !/ygoogle0e7a7e6dbf93e4e2.html
 </IfModule>
